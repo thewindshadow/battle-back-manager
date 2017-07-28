@@ -1,6 +1,6 @@
 package com.battle.framework.common.xss;
 
-import io.renren.common.exception.RRException;
+import com.battle.framework.common.exception.RRException;
 import org.apache.commons.lang.StringUtils;
 
 /**

@@ -1,0 +1,37 @@
+{
+  "hints": [],
+  "groups": [
+    {
+      "sourceType": "org.springboot.sample.config.ShanhyDataSourceProperties",
+      "name": "shanhy.datasource",
+      "type": "org.springboot.sample.config.ShanhyDataSourceProperties"
+    }
+  ],
+  "properties": [
+    {
+      "sourceType": "org.springboot.sample.config.ShanhyDataSourceProperties",
+      "name": "shanhy.datasource.driver-class-name",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "org.springboot.sample.config.ShanhyDataSourceProperties",
+      "name": "shanhy.datasource.password",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "org.springboot.sample.config.ShanhyDataSourceProperties",
+      "name": "shanhy.datasource.type",
+      "type": "java.lang.Class<? extends javax.sql.DataSource>"
+    },
+    {
+      "sourceType": "org.springboot.sample.config.ShanhyDataSourceProperties",
+      "name": "shanhy.datasource.url",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "org.springboot.sample.config.ShanhyDataSourceProperties",
+      "name": "shanhy.datasource.username",
+      "type": "java.lang.String"
+    }
+  ]
+}
