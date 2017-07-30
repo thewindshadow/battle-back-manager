@@ -19,7 +19,7 @@ import java.util.Map;
 @RunWith(SpringRunner.class)
 @SpringBootTest
 public class test {
-    Logger logger = Logger.getLogger(test.class);
+    private static  final Logger logger = Logger.getLogger(test.class);
     @Autowired
     private SysUserService sysUserService;
 
@@ -30,6 +30,7 @@ public class test {
         sysUser.setUsername("王五");
         sysUser.setEmail("123@163.com");
         sysUser.setPassword("123");
+        sysUser.setCreateBy(new Long(11));
         sysUserService.save(sysUser);
         List<SysUser> list = sysUserService.queryList(map);
 
