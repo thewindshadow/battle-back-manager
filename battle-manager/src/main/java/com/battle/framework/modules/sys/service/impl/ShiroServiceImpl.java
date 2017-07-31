@@ -6,7 +6,7 @@ import com.battle.framework.modules.sys.dao.SysUserDao;
 import com.battle.framework.modules.sys.dao.SysUserTokenDao;
 import com.battle.framework.modules.sys.domain.SysMenu;
 import com.battle.framework.modules.sys.domain.SysUser;
-import com.battle.framework.modules.sys.domain.SysUserTokenEntity;
+import com.battle.framework.modules.sys.domain.SysUserToken;
 import com.battle.framework.modules.sys.service.ShiroService;
 import org.apache.commons.lang.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -49,7 +49,7 @@ public class ShiroServiceImpl implements ShiroService {
     }
 
     @Override
-    public SysUserTokenEntity queryByToken(String token) {
+    public SysUserToken queryByToken(String token) {
         return sysUserTokenDao.queryByToken(token);
     }
 

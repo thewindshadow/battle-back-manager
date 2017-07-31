@@ -1,7 +1,7 @@
 package com.battle.framework.common.oauth2;
 
 import com.battle.framework.modules.sys.domain.SysUser;
-import com.battle.framework.modules.sys.domain.SysUserTokenEntity;
+import com.battle.framework.modules.sys.domain.SysUserToken;
 import com.battle.framework.modules.sys.service.ShiroService;
 import org.apache.shiro.authc.*;
 import org.apache.shiro.authz.AuthorizationInfo;
@@ -54,7 +54,7 @@ public class OAuth2Realm extends AuthorizingRealm {
         String accessToken = (String) token.getPrincipal();
 
         //根据accessToken，查询用户信息
-        SysUserTokenEntity tokenEntity = shiroService.queryByToken(accessToken);
+        SysUserToken tokenEntity = shiroService.queryByToken(accessToken);
         //token失效
         if(tokenEntity == null || tokenEntity.getExpireTime().getTime() < System.currentTimeMillis()){
             throw new IncorrectCredentialsException("token失效，请重新登录");

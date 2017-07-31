@@ -1,9 +1,8 @@
 package com.battle.framework.common.aspect;
 
-import com.battle.framework.common.annotation.SysLog;
 import com.battle.framework.common.utils.HttpContextUtils;
 import com.battle.framework.common.utils.IPUtils;
-import com.battle.framework.modules.sys.domain.SysLogEntity;
+import com.battle.framework.modules.sys.domain.SysLog;
 import com.battle.framework.modules.sys.domain.SysUser;
 import com.battle.framework.modules.sys.service.SysLogService;
 import com.google.gson.Gson;
@@ -53,8 +52,8 @@ public class SysLogAspect {
 		MethodSignature signature = (MethodSignature) joinPoint.getSignature();
 		Method method = signature.getMethod();
 
-		SysLogEntity sysLog = new SysLogEntity();
-		SysLog syslog = method.getAnnotation(SysLog.class);
+		SysLog sysLog = new SysLog();
+		com.battle.framework.common.annotation.SysLog syslog = method.getAnnotation(com.battle.framework.common.annotation.SysLog.class);
 		if(syslog != null){
 			//注解上的描述
 			sysLog.setOperation(syslog.value());

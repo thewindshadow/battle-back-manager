@@ -1,6 +1,6 @@
 package com.battle.framework.modules.sys.dao;
 
-import com.battle.framework.modules.sys.domain.SysLogEntity;
+import com.battle.framework.modules.sys.domain.SysLog;
 import org.apache.ibatis.annotations.Mapper;
 
 /**
@@ -11,6 +11,6 @@ import org.apache.ibatis.annotations.Mapper;
  * @date 2017-03-08 10:40:56
  */
 @Mapper
-public interface SysLogDao extends BaseDao<SysLogEntity> {
+public interface SysLogDao extends BaseDao<SysLog> {
 	
 }

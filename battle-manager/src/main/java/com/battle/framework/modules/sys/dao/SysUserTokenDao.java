@@ -1,6 +1,6 @@
 package com.battle.framework.modules.sys.dao;
 
-import com.battle.framework.modules.sys.domain.SysUserTokenEntity;
+import com.battle.framework.modules.sys.domain.SysUserToken;
 import org.apache.ibatis.annotations.Mapper;
 
 /**
@@ -8,10 +8,10 @@ import org.apache.ibatis.annotations.Mapper;
  *
  */
 @Mapper
-public interface SysUserTokenDao extends BaseDao<SysUserTokenEntity> {
+public interface SysUserTokenDao extends BaseDao<SysUserToken> {
     
-    SysUserTokenEntity queryByUserId(Long userId);
+    SysUserToken queryByUserId(Long userId);
 
-    SysUserTokenEntity queryByToken(String token);
+    SysUserToken queryByToken(String token);
 	
 }

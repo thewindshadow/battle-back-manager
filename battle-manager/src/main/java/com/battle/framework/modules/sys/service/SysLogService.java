@@ -1,7 +1,7 @@
 package com.battle.framework.modules.sys.service;
 
 
-import com.battle.framework.modules.sys.domain.SysLogEntity;
+import com.battle.framework.modules.sys.domain.SysLog;
 
 import java.util.List;
 import java.util.Map;
@@ -15,13 +15,13 @@ import java.util.Map;
  */
 public interface SysLogService {
 	
-	SysLogEntity queryObject(Long id);
+	SysLog queryObject(Long id);
 	
-	List<SysLogEntity> queryList(Map<String, Object> map);
+	List<SysLog> queryList(Map<String, Object> map);
 	
 	int queryTotal(Map<String, Object> map);
 	
-	void save(SysLogEntity sysLog);
+	void save(SysLog sysLog);
 
 	void delete(Long id);
 	

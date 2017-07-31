@@ -1,6 +1,5 @@
 package com.battle.framework.common.utils;
 
-import com.battle.framework.common.exception.RRException;
 import com.battle.framework.modules.sys.domain.SysUser;
 import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.session.Session;
@@ -46,11 +45,13 @@ public class ShiroUtils {
 	
 	public static String getKaptcha(String key) {
 		Object kaptcha = getSessionAttribute(key);
-		if(kaptcha == null){
-			throw new RRException("验证码已失效");
-		}
-		getSession().removeAttribute(key);
-		return kaptcha.toString();
+//		if(kaptcha == null){
+//			throw new RRException("验证码已失效");
+//		}
+//		getSession().removeAttribute(key);
+//		return kaptcha.toString();
+		return null;
 	}
+
 
 }

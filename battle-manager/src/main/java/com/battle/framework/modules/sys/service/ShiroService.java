@@ -2,7 +2,7 @@ package com.battle.framework.modules.sys.service;
 
 
 import com.battle.framework.modules.sys.domain.SysUser;
-import com.battle.framework.modules.sys.domain.SysUserTokenEntity;
+import com.battle.framework.modules.sys.domain.SysUserToken;
 
 import java.util.Set;
 
@@ -18,7 +18,7 @@ public interface ShiroService {
      */
     Set<String> getUserPermissions(long userId);
 
-    SysUserTokenEntity queryByToken(String token);
+    SysUserToken queryByToken(String token);
 
     /**
      * 根据用户ID，查询用户

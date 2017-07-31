@@ -1,7 +1,7 @@
 package com.battle.framework.modules.sys.service.impl;
 
 import com.battle.framework.modules.sys.dao.SysLogDao;
-import com.battle.framework.modules.sys.domain.SysLogEntity;
+import com.battle.framework.modules.sys.domain.SysLog;
 import com.battle.framework.modules.sys.service.SysLogService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -16,12 +16,12 @@ public class SysLogServiceImpl implements SysLogService {
 	private SysLogDao sysLogDao;
 	
 	@Override
-	public SysLogEntity queryObject(Long id){
+	public SysLog queryObject(Long id){
 		return sysLogDao.queryObject(id);
 	}
 	
 	@Override
-	public List<SysLogEntity> queryList(Map<String, Object> map){
+	public List<SysLog> queryList(Map<String, Object> map){
 		return sysLogDao.queryList(map);
 	}
 	
@@ -31,7 +31,7 @@ public class SysLogServiceImpl implements SysLogService {
 	}
 	
 	@Override
-	public void save(SysLogEntity sysLog){
+	public void save(SysLog sysLog){
 		sysLogDao.save(sysLog);
 	}
 	

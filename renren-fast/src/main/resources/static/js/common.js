@@ -25,6 +25,7 @@ var baseURL = "/";
 //登录token
 var token = localStorage.getItem("token");
 if(token == 'null'){
+    console.log('111');
     parent.location.href = baseURL + 'login.html';
 }
 
@@ -41,6 +42,7 @@ $.ajaxSetup({
     complete: function(xhr) {
         //token过期，则跳转到登录页面
         if(xhr.responseJSON.code == 401){
+            console.log('22');
             parent.location.href = baseURL + 'login.html';
         }
     }

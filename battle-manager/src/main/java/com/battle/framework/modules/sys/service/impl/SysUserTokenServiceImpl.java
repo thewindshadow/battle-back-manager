@@ -3,7 +3,7 @@ package com.battle.framework.modules.sys.service.impl;
 import com.battle.framework.common.oauth2.TokenGenerator;
 import com.battle.framework.common.utils.R;
 import com.battle.framework.modules.sys.dao.SysUserTokenDao;
-import com.battle.framework.modules.sys.domain.SysUserTokenEntity;
+import com.battle.framework.modules.sys.domain.SysUserToken;
 import com.battle.framework.modules.sys.service.SysUserTokenService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -19,17 +19,17 @@ public class SysUserTokenServiceImpl implements SysUserTokenService {
 	private final static int EXPIRE = 3600 * 12;
 
 	@Override
-	public SysUserTokenEntity queryByUserId(Long userId) {
+	public SysUserToken queryByUserId(Long userId) {
 		return sysUserTokenDao.queryByUserId(userId);
 	}
 
 	@Override
-	public void save(SysUserTokenEntity token){
+	public void save(SysUserToken token){
 		sysUserTokenDao.save(token);
 	}
 	
 	@Override
-	public void update(SysUserTokenEntity token){
+	public void update(SysUserToken token){
 		sysUserTokenDao.update(token);
 	}
 
@@ -44,9 +44,9 @@ public class SysUserTokenServiceImpl implements SysUserTokenService {
 		Date expireTime = new Date(now.getTime() + EXPIRE * 1000);
 
 		//判断是否生成过token
-		SysUserTokenEntity tokenEntity = queryByUserId(userId);
+		SysUserToken tokenEntity = queryByUserId(userId);
 		if(tokenEntity == null){
-			tokenEntity = new SysUserTokenEntity();
+			tokenEntity = new SysUserToken();
 			tokenEntity.setUserId(userId);
 			tokenEntity.setToken(token);
 			tokenEntity.setUpdateTime(now);
@@ -74,7 +74,7 @@ public class SysUserTokenServiceImpl implements SysUserTokenService {
 		String token = TokenGenerator.generateValue();
 
 		//修改token
-		SysUserTokenEntity tokenEntity = new SysUserTokenEntity();
+		SysUserToken tokenEntity = new SysUserToken();
 		tokenEntity.setUserId(userId);
 		tokenEntity.setToken(token);
 		update(tokenEntity);

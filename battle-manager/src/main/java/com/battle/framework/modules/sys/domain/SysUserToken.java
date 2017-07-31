@@ -7,7 +7,7 @@ import java.util.Date;
 /**
  * 系统用户Token
  */
-public class SysUserTokenEntity implements Serializable {
+public class SysUserToken implements Serializable {
 	private static final long serialVersionUID = 1L;
 	
 	//用户ID

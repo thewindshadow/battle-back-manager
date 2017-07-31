@@ -24,8 +24,8 @@ spring:
         max-request-size: 100MB
         enabled: true
     # 指定静态资源的路径
-#    resources:
-#        static-locations: classpath:/static/,classpath:/views/
+    resources:
+        static-locations: classpath:/static/,classpath:/views/
 
 # Mybatis配置
 mybatis:

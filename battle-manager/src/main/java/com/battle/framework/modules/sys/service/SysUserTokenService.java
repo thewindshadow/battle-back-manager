@@ -2,7 +2,7 @@ package com.battle.framework.modules.sys.service;
 
 
 import com.battle.framework.common.utils.R;
-import com.battle.framework.modules.sys.domain.SysUserTokenEntity;
+import com.battle.framework.modules.sys.domain.SysUserToken;
 
 /**
  * 用户Token
@@ -13,11 +13,11 @@ import com.battle.framework.modules.sys.domain.SysUserTokenEntity;
  */
 public interface SysUserTokenService {
 
-	SysUserTokenEntity queryByUserId(Long userId);
+	SysUserToken queryByUserId(Long userId);
 
-	void save(SysUserTokenEntity token);
+	void save(SysUserToken token);
 	
-	void update(SysUserTokenEntity token);
+	void update(SysUserToken token);
 
 	/**
 	 * 生成token
