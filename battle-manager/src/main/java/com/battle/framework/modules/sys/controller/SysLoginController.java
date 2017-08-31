@@ -6,7 +6,6 @@ import com.battle.framework.modules.sys.domain.SysUser;
 import com.battle.framework.modules.sys.service.SysUserService;
 import com.battle.framework.modules.sys.service.SysUserTokenService;
 import com.google.code.kaptcha.Constants;
-import com.google.code.kaptcha.Producer;
 import org.apache.commons.io.IOUtils;
 import org.apache.shiro.crypto.hash.Sha256Hash;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -25,8 +24,8 @@ import java.util.Map;
  */
 @RestController
 public class SysLoginController extends AbstractController {
-	@Autowired
-	private Producer producer;
+	//@Autowired
+	//private Producer producer;
 	@Autowired
 	private SysUserService sysUserService;
 	@Autowired
